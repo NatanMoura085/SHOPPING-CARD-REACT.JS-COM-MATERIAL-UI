@@ -2,28 +2,29 @@ import React, { createContext, useState } from "react";
 export const CarrinhoContext = createContext();
 
 function CarrinhoStorage({ children }) {
-    const [carrinho, setCarrinho] = useState([])
+    const [cartItems, setCartItems] = useState([]);
 
     function adicionarItem(item) {
-        setCarrinho([...carrinho, item])
+        setCarrinho([...cartItems, item])
 
     }
 
-    function removeItem(item) {
-        const NewCarrinho = carrinho.filter((carrinho) => carrinho.id ? item.id : setCarrinho(NewCarrinho))
-    }
-
-
+    const removeItem = (productId) => {
+        setCartItems((prevState) =>
+          prevState.filter((item) => item.id !== productId)
+        );
+      };
+    
 
 
     const dados = {
-        carrinho,
+        cartItems,
         adicionarItem,
         removeItem
 
     };
     return (
-        <CarrinhoContext.Provider value={{ dados, carrinho }}>
+        <CarrinhoContext.Provider value={{ dados, cartItems }}>
             {children}
 
         </CarrinhoContext.Provider>

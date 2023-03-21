@@ -12,7 +12,7 @@ import { useContext,useState } from 'react';
 import { CarrinhoContext} from '/src/Context/Provedor';
 
 export default function ButtonAppBar() {
-  const { carrinho } = useContext(CarrinhoContext);
+  const { cartItems} = useContext(CarrinhoContext);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
           </Typography>
           <IconButton sx={{ color: '#FFFAFA' }} color="sencondary" aria-label="add to shopping cart">
             <AddShoppingCartIcon />
-            <span>{carrinho.length}</span>
+            <span>{cartItems.length}</span>
           </IconButton>
         </Toolbar>
       </AppBar>
