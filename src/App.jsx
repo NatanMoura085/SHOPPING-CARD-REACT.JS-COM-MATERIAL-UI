@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Carrinho from './Components/Rotas/Carrinho'
+import Carrinho from './Rotas/Carrinho'
 
 export default function App() {
   

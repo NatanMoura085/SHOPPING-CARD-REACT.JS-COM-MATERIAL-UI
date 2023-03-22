@@ -1,6 +1,6 @@
 import React from "react";
 export default function Carrinho() {
-  console.log('rota acessada')
+  console.log('rota acessadaaaaa')
   return (
 
     <p>olaaaaaaaaaaaaaaaa</p>

@@ -3,8 +3,12 @@ import { Card, CardContent, CardMedia, Typography, Button, CardActionArea, CardA
 import { CarrinhoContext } from '/src/Context/Provedor';
 import { useContext } from 'react';
 export default function MultiActionAreaCard(props) {
-    const { title, description, image, price } = props;
+    const { id, title, description, image, price } = props;
     const { adicionarItem } = useContext(CarrinhoContext);
+    function handleAdicionarCarrinho() {
+        adicionarItem(id);
+    }
+
     return (
         <Card sx={{ maxWidth: 270, float: 'left', margin: '20px' }}>
             <CardActionArea>
@@ -25,7 +29,7 @@ export default function MultiActionAreaCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" size="large" color="secondary"  onClick={adicionarItem} sx={{ backgroundColor: "#FF00FF" }}   >
+                <Button variant="contained" size="large" color="secondary" onClick={() => handleAdicionarCarrinho()} sx={{ backgroundColor: "#FF00FF" }}   >
                     ADICIONAR AO CARRINHO
                 </Button>
             </CardActions>
