@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,11 +7,11 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useContext,useState } from 'react';
-import { CarrinhoContext} from '/src/Context/Provedor';
+import { useContext, useState } from 'react';
+import { CarrinhoContext } from '/src/Context/Provedor';
 
 export default function ButtonAppBar() {
-  const { cartItems} = useContext(CarrinhoContext);
+  const { cartItems } = useContext(CarrinhoContext);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
