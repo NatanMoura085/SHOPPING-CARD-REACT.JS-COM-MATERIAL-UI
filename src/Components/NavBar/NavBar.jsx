@@ -15,7 +15,7 @@ export default function ButtonAppBar() {
   const { cartItems } = useContext(CarrinhoContext);
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box className="animate__animated animate__fadeInRight" sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "#800080" }}>
         <Toolbar >
           <IconButton
@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
           </Typography>
           <Link to="/Carrinho">
             <IconButton sx={{ color: '#FFFAFA' }} color="sencondary" aria-label="add to shopping cart">
-              <AddShoppingCartIcon />
+              <AddShoppingCartIcon  />
               <span>{cartItems.length}</span>
             </IconButton>
           </Link>

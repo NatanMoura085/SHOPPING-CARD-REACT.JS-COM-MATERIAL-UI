@@ -5,13 +5,13 @@ import { CarrinhoContext } from '/src/Context/Provedor';
 import { useContext } from 'react';
 export default function MultiActionAreaCard(props) {
     const { id, title, description, image, price } = props;
-    const { adicionarItem } = useContext(CarrinhoContext);
+    const { adicionarItem,Qtdcard, quantidades } = useContext(CarrinhoContext);
     function handleAdicionarCarrinho() {
         adicionarItem(id);
     }
 
     return (
-        <Card sx={{ maxWidth: 270, float: 'left', margin: '20px' }}>
+        <Card className="animate__animated animate__fadeInUp" sx={{ maxWidth: 270, float: 'left', margin: '20px' }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
@@ -31,8 +31,9 @@ export default function MultiActionAreaCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" size="large" color="secondary" onClick={() => handleAdicionarCarrinho()} sx={{ backgroundColor: "#FF00FF", fontSize: '14px', textAlign: 'center', whiteSpace: 'nowrap',margin:'5px' }}>
+                <Button variant="contained" size="large" color="secondary" onClick={() => handleAdicionarCarrinho()} sx={{ backgroundColor: "#FF00FF", fontSize: '14px', textAlign: 'center', whiteSpace: 'nowrap', margin: '5px', gap: '7px' }}>
                     <AddShoppingCartIcon />
+                    <span>{quantidades || 0}</span>
                     ADICIONA AO CARRINHO
 
                 </Button>
