@@ -5,12 +5,13 @@ const GlobaStyle = createGlobalStyle`
 margin:0;
 padding:0;
 box-sizing: border-box;
+text-decoration:none;
 
 
 }
 body {
    
-background-color: gray;
+background-color: #808080;
 font-family:sans-serif;
 
  

@@ -1,9 +1,9 @@
 import React from "react";
+import CustomizedTables from '../../Components/Table/Table'
 export default function Carrinho() {
-  console.log('rota acessadaaaaa')
   return (
+    <CustomizedTables />
 
-    <p>olaaaaaaaaaaaaaaaa</p>
   )
 
 }

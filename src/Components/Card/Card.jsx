@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography, Button, CardActionArea, CardActions } from "@mui/material";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { CarrinhoContext } from '/src/Context/Provedor';
 import { useContext } from 'react';
 export default function MultiActionAreaCard(props) {
@@ -23,14 +24,17 @@ export default function MultiActionAreaCard(props) {
                         {title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {description}
+                        {description} {price}
+
 
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" size="large" color="secondary" onClick={() => handleAdicionarCarrinho()} sx={{ backgroundColor: "#FF00FF" }}   >
-                    ADICIONAR AO CARRINHO
+                <Button variant="contained" size="large" color="secondary" onClick={() => handleAdicionarCarrinho()} sx={{ backgroundColor: "#FF00FF", fontSize: '14px', textAlign: 'center', whiteSpace: 'nowrap',margin:'5px' }}>
+                    <AddShoppingCartIcon />
+                    ADICIONA AO CARRINHO
+
                 </Button>
             </CardActions>
         </Card>
