@@ -1,10 +1,9 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '../App'
-import GlobaStyle from '../Style/GobalStyle'
-import MultiActionAreaCard from '../Components/Card/Card'
-import ButtonAppBar from '../Components/NavBar/NavBar'
+import GlobaStyle from '../../Style/GobalStyle'
+import MultiActionAreaCard from '../../Components/Card/Card'
+import ButtonAppBar from '../../Components/NavBar/NavBar'
 export default function Home() {
     const phone = {
         id: 'phone',
