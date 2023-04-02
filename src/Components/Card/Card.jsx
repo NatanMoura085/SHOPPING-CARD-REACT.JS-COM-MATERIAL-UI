@@ -5,7 +5,7 @@ import { CarrinhoContext } from '/src/Context/Provedor';
 import { useContext } from 'react';
 export default function MultiActionAreaCard(props) {
     const { id, title, description, image, price } = props;
-    const { adicionarItem,Qtdcard, quantidades } = useContext(CarrinhoContext);
+    const { adicionarItem, quantidades } = useContext(CarrinhoContext);
     function handleAdicionarCarrinho() {
         adicionarItem(id);
     }

@@ -28,7 +28,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#FFFFFF' }}>
-            News
+           Home
           </Typography>
           <Link to="/Carrinho">
             <IconButton sx={{ color: '#FFFAFA' }} color="sencondary" aria-label="add to shopping cart">

@@ -28,6 +28,7 @@ function CarrinhoStorage({ children }) {
             } else {
                 newState[id] = 1;
             }
+            console.log(newState)
             return newState;
         });
     }, []);
