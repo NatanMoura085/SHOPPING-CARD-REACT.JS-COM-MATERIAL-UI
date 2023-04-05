@@ -20,20 +20,17 @@ function CarrinhoStorage({ children }) {
     const Qtdcard = useCallback((id) => {
         setCartItems((prevCartItems) => [...prevCartItems, id]);
         setQuantidades((prevQuantidades) => {
-            const newState = { ...prevQuantidades }
-
-            if (newState[id]) {
-                newState[id] += 1
-
-            } else {
-                newState[id] = 1;
+            const newState = [ ...prevQuantidades]
+             newState.filter((product)=>{
+                product.id == product.id 
+                return setQuantidades(product.id)
             }
-            console.log(newState)
-            return newState;
+                )
+          
         });
     }, []);
 
-
+   
 
     const dados = {
         cartItems,
